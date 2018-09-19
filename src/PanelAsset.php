@@ -11,7 +11,7 @@ use yii\web\AssetBundle;
 class PanelAsset extends AssetBundle
 {
     /** @var string  */
-    public $sourcePath = '@infinitiweb/widgets/yii2/panel/src/assets';
+    public $sourcePath = '@infinitiweb/yii2-panel/src/assets';
 
     /** @var array */
     public $js = [

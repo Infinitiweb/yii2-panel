@@ -1,40 +1,52 @@
-# kak-panel
-Yii widget bootstrap panel + sortable panel
-=====================
+# infinitiweb-panel
 
+Yii panel-widget
+================
 
 The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
 
 Either run
 
 ```
-php composer.phar require --prefer-dist kak/panel "*"
+composer require --prefer-dist infinitiweb/yii2-panel "dev-master"
 ```
 
 or add
 
 ```
-"kak/panel": "*"
+"infinitiweb/yii2-panel": "dev-master"
 ```
 
 to the require section of your `composer.json` file.
 
-
 Usage
 -----
+
 ```php
-<?php kak\widgets\panel\Panel::begin([
-    'title' =>  ($model->isNewRecord ? 'Create' : ' Update'), // title panel
-    'height' => 300, // 300px                                 // is set height then init SlimScroll
-    'heading' => true,                                        // show/hide title 
+<?php
+use infinitiweb\widgets\yii2\panel\Panel;
+
+Panel::begin([
+    'title' =>  'Update',
+    'heading' => true,                                         
 ])?>
+
 <!-- content -->
-<?php kak\widgets\panel\Panel::end();?>
+
+<?php Panel::end();?>
+
 ```
+
 Or
-```php 
-<?=kak\widgets\panel\Panel::widget([
-    'title' => 'title panel',
+
+```php
+<?php
+
+use infinitiweb\widgets\yii2\panel\Panel;
+
+echo Panel::widget([
+    'title' => 'Title',
     'content' => ''
-]);?>
+]);
+?>
 ```
